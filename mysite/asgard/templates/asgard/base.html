@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <title>ASGARD</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </head>
+    <body>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+                    <h1>ASGARD</h1>
+        </div>
+
+            <!-- Top Navigation top bar -->
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="radarsite.html">Get Weather & Climate Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Documentation</a>
+        </li>
+    </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Sign Up   </a></li>
+      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login   </a></li>
+      </ul>
+  </div>
+</nav>
+        {% block content %}{% endblock %}
+
+{% block footer %}
+    <hr>
+    <h2>Contributors and Acknowledgements</h2>
+        <p></p>
+    {% endblock %}
+</body>
+</html>

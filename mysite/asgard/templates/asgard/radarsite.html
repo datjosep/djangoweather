@@ -1,0 +1,17 @@
+{% extends 'templates/asgard/base.html' %}
+{% load widget_tweaks %}
+{% block title %}Data Input{{ block.super }}{% endblock %}
+
+{% block content %}
+<h2>Data Input</h2>
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+<form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
